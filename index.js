@@ -9,10 +9,12 @@ app.get('/', function(req, res) {
   res.send('Bonjour le monde');
 });
 
-app.get('/api/:id/:url', (req, res) => {
+//api/:id/:url
+
+app.get('/:id', (req, res) => {
   const contentID = req.params.id || 487026341;
   axios
-    .get(``)
+    .get(`http://www.clickability.guru/templates/getContent2?cID=${contentID}`)
     .then(response => {
       res.status(200).send(response.data);
     })

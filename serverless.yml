@@ -1,5 +1,6 @@
 service: my-express-application
-
+plugins:
+  - serverless-offline
 provider:
   name: aws
   runtime: nodejs8.10
@@ -12,3 +13,7 @@ functions:
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+  getContent:
+    handler: index.handler
+    events:
+      - http: 'GET /api/{proxy+}'

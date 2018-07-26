@@ -1,3 +1,4 @@
+require('appoptics-apm');
 const serverless = require('serverless-http');
 const express = require('express');
 const axios = require('axios');
@@ -11,7 +12,7 @@ app.get('/', function(req, res) {
 
 //api/:id/:url
 
-app.get('/:id', (req, res) => {
+app.get('/api/:id', (req, res) => {
   const contentID = req.params.id || 487026341;
   axios
     .get(`http://www.clickability.guru/templates/getContent2?cID=${contentID}`)

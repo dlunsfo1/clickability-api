@@ -80,3 +80,6 @@ jspm_packages
 
 # Serverless directories
 .serverless
+
+# Artilery IO
+stress.yml

@@ -6,10 +6,8 @@ const app = express();
 app.use(express.json());
 
 app.get('/', function(req, res) {
-  res.send('Bonjour le monde');
+  res.send('Clickability Guru API');
 });
-
-//api/:id/:url
 
 app.get('/api/:wss', (req, res) => {
   const wssID = req.params.wss || 'Topics';

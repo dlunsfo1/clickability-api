@@ -21,7 +21,7 @@ app.get('/api/:wss', (req, res) => {
     });
 });
 
-app.get('/api/:id/:url', (req, res) => {
+app.get('/api/:wss/:id/:url', (req, res) => {
   const contentID = req.params.id || 487026341;
   axios
     .get(`http://www.clickability.guru/templates/getContent2?cID=${contentID}`)
